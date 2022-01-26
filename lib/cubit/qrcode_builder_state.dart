@@ -1,6 +1,10 @@
 part of 'qrcode_builder_cubit.dart';
 
-@immutable
-abstract class QrcodeBuilderState {}
+class QrcodeBuilderState {
+  final String textResult;
+  Barcode? barcode;
 
-class QrcodeBuilderInitial extends QrcodeBuilderState {}
+  QrcodeBuilderState(this.barcode, {required this.textResult});
+
+}
+
