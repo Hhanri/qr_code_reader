@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:qr_code_reader/controllers/home_screen_binding.dart';
 import 'package:qr_code_reader/pages/home_page.dart';
 import 'package:qr_code_reader/resources/strings.dart';
+import 'package:qr_code_reader/resources/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,10 +18,7 @@ class MyApp extends StatelessWidget {
       title: SystemStrings.appTitle,
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.blue,
-      ),
+      theme: theme,
       getPages: [
         GetPage(
           name: "/",
