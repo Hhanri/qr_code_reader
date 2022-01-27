@@ -12,11 +12,8 @@ class ReadQRCodeScreen extends StatefulWidget {
 class _ReadQRCodeScreenState extends State<ReadQRCodeScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: 
-          QRCodeView(context: context)
-      )
+    return Center(
+      child: QRCodeView(context: context)
     );
   }
 }

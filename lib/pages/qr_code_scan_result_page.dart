@@ -51,8 +51,8 @@ class GoToButtonWidget extends StatelessWidget {
             launch(url);
           },
           child:FittedBox (child: Row(
-            children: [
-              const Text(SystemStrings.goToPage),
+            children: const [
+               Text(SystemStrings.goToPage),
             ],
           ))
       ),
