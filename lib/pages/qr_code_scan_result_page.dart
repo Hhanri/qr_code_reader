@@ -18,9 +18,14 @@ class ResultPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(result, maxLines: 4, overflow: TextOverflow.ellipsis),
+                Text(
+                  result,
+                  maxLines: 4,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: result.isURL ? MainAxisAlignment.spaceAround : MainAxisAlignment.center,
                   children: [
                     const CopyResultButtonWidget(),
                     Visibility(
@@ -47,14 +52,14 @@ class GoToButtonWidget extends StatelessWidget {
     return SizedBox(
       width: AppConfig.widthScreen(context)*0.3,
       child: ElevatedButton(
-          onPressed: (){
+        onPressed: (){
             launch(url);
           },
-          child:FittedBox (child: Row(
+        child:FittedBox (child: Row(
             children: const [
                Text(SystemStrings.goToPage),
             ],
-          ))
+          )),
       ),
     );
   }
@@ -69,7 +74,7 @@ class CopyResultButtonWidget extends StatelessWidget {
       child: ElevatedButton(
         onPressed: (){
         },
-        child: const Text(SystemStrings.copy)
+        child: const Text(SystemStrings.copy),
       ),
     );
   }
