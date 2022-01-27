@@ -44,8 +44,8 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.qr_code_reader.hanri.qr_code_reader"
-        minSdkVersion flutter.minSdkVersion 21
-        targetSdkVersion flutter.targetSdkVersion 30
+        minSdkVersion 20
+        targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
