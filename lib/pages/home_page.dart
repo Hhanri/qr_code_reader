@@ -63,8 +63,6 @@ class HomeScreenScaffoldWidget extends StatelessWidget {
   }
 }
 
-
-
 class BottomNavigationBarWidget extends StatelessWidget {
   final HomeScreenController controller;
   final List<BottomNavigationBarItem> bottomNavBarItems;

@@ -12,32 +12,32 @@ class ResultPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          appBar: const AppBarWidget(),
-          body: Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text(
-                  result,
-                  maxLines: 4,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.center,
-                ),
-                Row(
-                  mainAxisAlignment: result.isURL ? MainAxisAlignment.spaceAround : MainAxisAlignment.center,
-                  children: [
-                    const CopyResultButtonWidget(),
-                    Visibility(
-                      child: GoToButtonWidget(url: result),
-                      visible: result.isURL ? true : false,
-                      maintainSize: false,
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          )
+        appBar: const AppBarWidget(),
+        body: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                result,
+                maxLines: 4,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.center,
+              ),
+              Row(
+                mainAxisAlignment: result.isURL ? MainAxisAlignment.spaceAround : MainAxisAlignment.center,
+                children: [
+                  const CopyResultButtonWidget(),
+                  Visibility(
+                    child: GoToButtonWidget(url: result),
+                    visible: result.isURL ? true : false,
+                    maintainSize: false,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        )
       ),
     );
   }
@@ -53,13 +53,15 @@ class GoToButtonWidget extends StatelessWidget {
       width: AppConfig.widthScreen(context)*0.3,
       child: ElevatedButton(
         onPressed: (){
-            launch(url);
-          },
-        child:FittedBox (child: Row(
+          launch(url);
+        },
+        child: FittedBox (
+          child: Row(
             children: const [
-               Text(SystemStrings.goToPage),
+              Text(SystemStrings.goToPage),
             ],
-          )),
+          )
+        ),
       ),
     );
   }
