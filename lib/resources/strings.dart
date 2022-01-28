@@ -3,6 +3,7 @@ class SystemStrings {
   static const String result = "Result";
   static const String goToPage = "Go To Page";
   static const String copy = "Copy";
+  static const String hintText = "Enter Data";
 }
 
 class ScreenTitles {
